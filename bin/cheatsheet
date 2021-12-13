@@ -1,0 +1,15 @@
+arduino-cli core install arduino:avr
+
+arduino-cli sketch new blink
+arduino-cli compile --fqbn arduino:avr:mega blink
+arduino-cli upload -p /dev/ttyACM0 --fqbn arduino:avr:mega blink
+
+python3 ~/MyPyhton/bin/Serial-Monitor/monitor.py
+-------------
+killall putty
+
+#upload
+arduino-cli upload -p /dev/ttyACM0 --fqbn arduino:avr:mega ./$1
+-------------
+stty -F /dev/ttyACM0 raw 9600
+cat /dev/ttyACM0
