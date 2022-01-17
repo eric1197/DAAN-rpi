@@ -1,0 +1,4 @@
+p  =/dev/ttyACM0
+c  =arduino-cli compile --fqbn arduino:avr:mega RGB{enter}
+u  =arduino-cli upload -p /dev/ttyACM0 --fqbn arduino:avr:mega RGB{enter}
+m  =python3 ~/MyPyhton/bin/Serial-Monitor/monitor.py{enter}{Delay=500}/dev/ttyACM0{enter}
